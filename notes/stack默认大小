@@ -1,8 +1,7 @@
 Windows 10
 cygwin gcc x86-64 
 
-测试结果 2067232 接近2M
-+0. byte
+测试结果 2067232 byte 接近2M
 
 code:
 #include<stdio.h>
