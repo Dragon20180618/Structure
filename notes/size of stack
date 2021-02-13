@@ -1,0 +1,11 @@
+Windows 10
+cygwin gcc x86-64 
+
+测试结果 2067232 byte
+
+code:
+#include<stdio.h>
+int main(){
+    char a[2067232];
+    return 0;
+}
