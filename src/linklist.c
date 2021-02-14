@@ -2,11 +2,11 @@
  * @Description: 
  * @Author: 
  * @Date: 2021-02-14 12:50:54
- * @LastEditTime: 2021-02-14 20:34:50
+ * @LastEditTime: 2021-02-14 20:57:45
  */
 #include<stdio.h>
 #include<malloc.h>
-typedef struct{
+typedef struct Linklist{
     int v;
     struct Linklist *next;
 }Linklist;
@@ -15,12 +15,12 @@ void init(Linklist *head){
 }
 void add(Linklist *head){
     Linklist *node=head;
-    Linklist *w;
+    Linklist *w=(Linklist*)malloc(sizeof(Linklist));
     int value;
     printf("Input the node's value:");
-    scanf("%d",value);
+    scanf("%d",&value);
     w->v=value;
-    while(node->next!=NULL){
+    while(node->next){
         node=node->next;
     }
     node->next=w;
@@ -39,10 +39,26 @@ void del(Linklist* head, int value){
         node=node->next;
     }
 }
+void output(Linklist *head){
+    if(!head->next){
+        printf("The Linklist is null\n");
+        return;
+    }
+    printf("The values of Linklist:");
+    Linklist *node=head->next;
+    while(node){
+        printf("%d\t",node->v);
+        node=node->next;
+    }
+    printf("\n");
+}
 int main(void){
     Linklist head;
-    int a;
-    printf("%d\n",scanf("%d",&a));
-    // create(&head);
+    init(&head);
+    add(&head);
+    add(&head);
+    output(&head);
+    del(&head,1);
+    output(&head);
     return 0;
 }
