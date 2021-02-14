@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: 
  * @Date: 2021-02-13 21:32:27
- * @LastEditTime: 2021-02-14 12:43:14
+ * @LastEditTime: 2021-02-14 12:50:03
  */
 #include<stdio.h>
 #include<malloc.h>
@@ -62,6 +62,13 @@ void delete(sqlist *s, int position){
     }
     return;
 }
+int Index(sqlist *s,int value){//index is keyword, change to Index
+    int i;
+    for(i=0;i<s->len;i++){
+        if(s->v[i]==value)
+            return i;
+    }
+}
 int main(){
     sqlist s;
     init(&s);
@@ -71,5 +78,7 @@ int main(){
     printf("%d\t%d\t%d\n",s.v[0],s.len,s.max);
     delete(&s,0);
     printf("%d\t%d\t%d\n",s.v[1],s.len,s.max);
+    int x=Index(&s,1);
+    printf("The index of value 1:%d\n",x);
     return 0;
 }
