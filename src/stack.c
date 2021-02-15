@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: 
  * @Date: 2021-02-15 09:49:01
- * @LastEditTime: 2021-02-15 09:59:03
+ * @LastEditTime: 2021-02-15 10:15:29
  */
 #include<stdio.h>
 #include<malloc.h>
@@ -34,6 +34,8 @@ int pop(){
     return ss.v[ss.sp];
 }
 int main(void){
-    free(&ss);
+    push(1);
+    push(2);
+    pop();
     return 0;
 }
