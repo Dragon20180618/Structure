@@ -2,21 +2,22 @@
  * @Description: 
  * @Author: 
  * @Date: 2021-02-15 11:09:20
- * @LastEditTime: 2021-02-16 09:23:43
+ * @LastEditTime: 2021-02-16 09:43:26
  */
 #include<stdio.h>
 #include<string.h>
+#include<malloc.h>
 int main(){ 
     char M[]="dasbdsa";
     char T[]="abbab";
     int i,j,k;
     int lenT=strlen(T),lenM=strlen(M);
-    int t[5];
+    int *t=(int*)malloc(sizeof(int)*lenT);
     //get particial match table;
-    for(i=0;i<5;i++)
+    for(i=0;i<lenT;i++)
         t[i]=0;
     int sign;
-    for(i=2;i<=5;i++){
+    for(i=2;i<=lenT;i++){
         for(j=1;j<i;j++){
             sign=1;
             for(k=0;k<j;k++){
@@ -31,6 +32,7 @@ int main(){
             }
         }
     }
-    for(i=0;i<5;i++)
+    for(i=0;i<lenT;i++)
         printf("%d\t",t[i]);
+    
 }
