@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: 
  * @Date: 2021-02-15 11:09:20
- * @LastEditTime: 2021-02-16 10:02:24
+ * @LastEditTime: 2021-02-16 10:37:45
  */
 #include<stdio.h>
 #include<string.h>
@@ -12,11 +12,11 @@ int main(){
     char T[]="abbab";
     int i,j,k;
     int lenT=strlen(T),lenM=strlen(M);
-    int *t=(int*)malloc(sizeof(int)*lenT);
+    int *t=(int*)malloc(sizeof(int)*lenT);//table
     //get particial match table;
     for(i=0;i<lenT;i++)
         t[i]=0;
-    int sign;
+    int sign;//match sign
     for(i=2;i<=lenT;i++){
         for(j=1;j<i;j++){
             sign=1;
@@ -27,9 +27,8 @@ int main(){
                    break;
                 }
             }
-            if(sign==1){
+            if(sign==1)
                 t[i-1]=j;
-            }
         }
     }
     for(i=0;i<lenT;i++)
@@ -42,7 +41,7 @@ int main(){
             i++;
             j++;
             if(j==lenT){
-                printf("answer:%d\n", i-j);
+                printf("answer:%d\n", i-j);//final
                 return 0;
             }
         }
