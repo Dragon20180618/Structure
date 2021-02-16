@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: 
  * @Date: 2021-02-15 11:09:20
- * @LastEditTime: 2021-02-16 11:06:29
+ * @LastEditTime: 2021-02-16 11:10:06
  */
 #include<stdio.h>
 #include<string.h>
@@ -17,7 +17,7 @@ int main(){
     for(i=0;i<lenT;i++)
         t[i]=0;
     int sign;//match sign
-    for(i=2;i<=lenT;i++){
+    for(i=2;i<lenT;i++){//needn't first and last 
         for(j=1;j<i;j++){
             sign=1;
             for(k=0;k<j;k++){
