@@ -1,3 +1,6 @@
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/fcd6928488064dbab0bb39aa7a8ae6ab)](https://app.codacy.com/gh/Dragon20180618/Structure?utm_source=github.com&utm_medium=referral&utm_content=Dragon20180618/Structure&utm_campaign=Badge_Grade)
+
 <!--
  * @Description: 
  * @Author: DRAGON
