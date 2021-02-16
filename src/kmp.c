@@ -2,14 +2,14 @@
  * @Description: 
  * @Author: 
  * @Date: 2021-02-15 11:09:20
- * @LastEditTime: 2021-02-16 11:02:36
+ * @LastEditTime: 2021-02-16 11:06:29
  */
 #include<stdio.h>
 #include<string.h>
 #include<malloc.h>
 int main(){ 
-    char M[]="dasbabbaabbabbdsa\0";//index:8
-    char T[]="abbab\0";
+    char M[]="dasbabbaabbabbdsa";//index:8
+    char T[]="abbab";
     int i,j,k;
     int lenT=strlen(T),lenM=strlen(M);
     int *t=(int*)malloc(sizeof(int)*lenT);//table
