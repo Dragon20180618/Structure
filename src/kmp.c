@@ -2,13 +2,13 @@
  * @Description: 
  * @Author: 
  * @Date: 2021-02-15 11:09:20
- * @LastEditTime: 2021-02-16 09:43:26
+ * @LastEditTime: 2021-02-16 10:02:24
  */
 #include<stdio.h>
 #include<string.h>
 #include<malloc.h>
 int main(){ 
-    char M[]="dasbdsa";
+    char M[]="dasbabbaabbabbdsa";//index:8
     char T[]="abbab";
     int i,j,k;
     int lenT=strlen(T),lenM=strlen(M);
@@ -33,6 +33,26 @@ int main(){
         }
     }
     for(i=0;i<lenT;i++)
-        printf("%d\t",t[i]);
-    
+        printf("%d\t",t[i]);//output table
+    printf("\n");
+    i=0,j=0;//reset ij
+    while(i<=lenM-lenT){
+        printf("i:%d\tj:%d\n",i,j);
+        if(M[i]==T[j]){
+            i++;
+            j++;
+            if(j==lenT){
+                printf("answer:%d\n", i-j);
+                return 0;
+            }
+        }
+        else{
+            if(j==0){
+                i++;
+                continue;
+            }
+            i-=t[j-1];
+            j=0;
+        }
+    }
 }
