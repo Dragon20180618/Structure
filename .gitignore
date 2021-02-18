@@ -44,4 +44,4 @@ build*
 *~
 
 #debug log
-.stackdump
+*.stackdump
